@@ -93,15 +93,16 @@ public class PlayerController : MonoBehaviour
             SpecialAnimationHandling();
             Attack();
         }
+        else
+        {
+            animator.SetTrigger(stateOfPlayer.Death.ToString());
+        }
         updateSliderAttack();
         updateSliderTele();
-        Invoke("Death", 2f);
-        //Death();
     }
 
     private void FixedUpdate()
-    {
-        
+    {     
         if (SystemVariable.gameController._state != stateOfGame.GameOver.ToString())
         {
             Movement();
@@ -324,14 +325,6 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    public void Death()
-    {
-        if (transform.position.y < minCam.y)
-        {
-            SystemVariable.gameController._state = stateOfGame.GameOver.ToString();
-        }
-    }
-
     //Hàm kiểm tra xem Player có ở trên mặt đất hay không?
     private void CheckCircle()
     {
@@ -377,6 +370,11 @@ public class PlayerController : MonoBehaviour
         if (collision.gameObject.CompareTag("ArrowZone"))
         {
             SystemVariable.gameController.Arrow.SetActive(false);
+        }
+
+        if (collision.gameObject.CompareTag("DeathZone"))
+        {
+            SystemVariable.gameController._state = stateOfGame.GameOver.ToString();
         }
     }
 

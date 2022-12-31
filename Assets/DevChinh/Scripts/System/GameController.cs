@@ -79,7 +79,7 @@ public class GameController : MonoBehaviour
             losePanel.SetActive(true);
             SystemVariable.audioController.unmuteBG();
             SystemVariable.audioController.Play(gameover);
-            SystemVariable.playerController.animator.SetTrigger(stateOfPlayer.Death.ToString());
+          
             //SystemVariable.playerController.enabled = false;
             if (hasBoss)
             {
@@ -337,6 +337,8 @@ public class GameController : MonoBehaviour
     public void resetGame()
     {
         PlayerPrefs.DeleteAll();
-        SceneManager.LoadScene(1);
+        Prefs.LEVEL++;
+        SceneManager.LoadScene(Prefs.LEVEL);
+        setTimeScaleOn();
     }
 }

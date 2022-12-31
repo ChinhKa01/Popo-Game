@@ -24,6 +24,7 @@ TagManager:
   - ButtonLarge
   - GroundMove
   - ArrowZone
+  - DeathZone
   layers:
   - Default
   - TransparentFX
