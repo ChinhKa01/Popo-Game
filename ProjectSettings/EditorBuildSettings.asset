@@ -6,6 +6,39 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Demo.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/DevChinh/Scenes/Main Menu.unity
+    guid: 1895ad9c2ddf5ec4d9e58cc1346136f1
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level1.unity
+    guid: 557ef3e52fb21a641bfe51a6aa5ff872
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level2.unity
+    guid: c640eda6ac73caf47bc9b16d155549b7
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level3.unity
+    guid: 25fd2c29cd5e4ec41ad14ddbec67bf1e
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level4.unity
+    guid: a7d4838fe8f5c574b881d431ed2bfcab
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level5.unity
+    guid: 6f4494e0c6b8863428580141eca9b4a1
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level6.unity
+    guid: d88826b97e5d837449185e03f08658e7
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level7.unity
+    guid: 66093f660ff8a6247b20c6d8147f1c1c
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level8.unity
+    guid: a37346c4431425c42a6e8dc424690ec0
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level9.unity
+    guid: cbbe838d685c03e46bc89e224199f6d9
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level10.unity
+    guid: f4c4fd034ddca95409f2942f260f60c0
+  - enabled: 1
+    path: Assets/DevChinh/Scenes/Level11.unity
+    guid: 1170b698a847c5847ba00df641225c7b
   m_configObjects: {}

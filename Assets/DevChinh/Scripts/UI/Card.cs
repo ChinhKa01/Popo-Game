@@ -9,3 +9,4 @@ public class Card : ScriptableObject
     public int cointAmount;
     public Sprite art;
 }
+    

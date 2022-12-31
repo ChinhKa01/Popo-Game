@@ -12,14 +12,15 @@ public class SystemVariable
 
     public static int quantityCurrentHeart;
 
-    public static int LifeOfPlayer;
-
     //Const
     public const string LEVEL = "Level";
     public const string COINT = "Coint";
     public const string LIFE = "Life";
-    public const string RUBI = "Rubi";
     public const string SKIN = "Skin";
+    public const string DAME = "Dame";
+    public const string SPEED = "Speed";
+    public const string TIMEATTACK = "TimeAttack";
+    public const string TIMETELEPORT = "TimeTeleport";
 }
 
 //Enum

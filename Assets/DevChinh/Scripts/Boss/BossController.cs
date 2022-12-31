@@ -24,9 +24,11 @@ public class BossController : MonoBehaviour
     public LayerMask PlayerLM;
     public Slider HealthBar;
     public HealthBar healthBarScript;
+    public GameObject PanelBonus;
 
     public virtual void Start()
     {
+        PanelBonus.SetActive(false);
         for (int i = 0; i < quantityIns; i++)
         {
             //skill1
@@ -216,8 +218,10 @@ public class BossController : MonoBehaviour
         this.enabled = false;
     }
 
-    public void callPort() => SystemVariable.gameController.port.SetActive(true);
-
+    public void callPort() {
+        PanelBonus.SetActive(true);
+        SystemVariable.gameController.port.SetActive(true);
+    }
     public void DropItem()
     {
         Instantiate(ItemDrop, transform.position, Quaternion.identity);

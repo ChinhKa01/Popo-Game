@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a0e7be34760c944b40ed47e4e35405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {x: 0, y: 3, z: 0}
-  Pos2: {x: 0, y: 0, z: 0}
+  Pos1: {fileID: 0}
+  Pos2: {fileID: 0}
   Speed: 0.5
   isPingPong: 1

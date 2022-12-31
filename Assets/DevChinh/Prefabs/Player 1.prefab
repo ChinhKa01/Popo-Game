@@ -122,11 +122,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5028101761db3a42b1a6cb92b22931d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speed: 15
+  _speed: 10
   _forceJump: 20
   _forceShoot: 2000
+  _speedOfCoint: 15
   _radiusOfGroundCheckPoint: 0.14
+  _TimeToAttack: 0
+  _TimeToTelePos: 0
   _radiusOfAttackPoint: 0.72
+  _radiusTakeCoint: 7
   groundCheckPoint: {fileID: 5426148852007896808}
   attackPoint: {fileID: 5426148851879657455}
   jumpEffect: {fileID: 5657175714623305252, guid: 1b52a8c9140df8541b13eeaba38a922c, type: 3}
@@ -138,7 +142,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   _damage: 20
+  dameOff: 0
   poolingAmount: 20
+  _damageRand: 0
   Ground:
     serializedVersion: 2
     m_Bits: 64
@@ -148,6 +154,12 @@ MonoBehaviour:
   Platform:
     serializedVersion: 2
     m_Bits: 512
+  Button:
+    serializedVersion: 2
+    m_Bits: 1024
+  Coint:
+    serializedVersion: 2
+    m_Bits: 2048
   damagePopups: {fileID: 4199635385277591362, guid: c2facef622a75e94788970be3b16759f, type: 3}
   dartObj: {fileID: 8703127869978394216, guid: 014fb203de582cd43912d67cc30e35c2, type: 3}
   dartPool: {fileID: 0}
@@ -156,6 +168,11 @@ MonoBehaviour:
   maxCam: {x: 0, y: 0}
   attackSound: {fileID: 8300000, guid: a7fabe018ec33b54ab48acc5c4982991, type: 3}
   attack2Sound: {fileID: 8300000, guid: 7c98e3c831bb9b34e912b271ffde53a5, type: 3}
+  forceUp: 1000
+  sliderTime: {fileID: 0}
+  sliderTime2: {fileID: 0}
+  textTimeAttack: {fileID: 0}
+  textTimeTele: {fileID: 0}
 --- !u!61 &5426148851203317302
 BoxCollider2D:
   m_ObjectHideFlags: 0

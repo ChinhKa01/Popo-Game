@@ -15,7 +15,10 @@ MonoBehaviour:
   characters:
   - name: Blue
     SkinColor: {r: 0, g: 0.8052707, b: 1, a: 0}
+    cost: 0
   - name: Green
     SkinColor: {r: 0.20221877, g: 1, b: 0, a: 0}
+    cost: 500
   - name: Red
     SkinColor: {r: 1, g: 0.18460137, b: 0, a: 0}
+    cost: 1000

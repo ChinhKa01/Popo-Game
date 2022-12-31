@@ -12,7 +12,7 @@ public class CardDisplay : MonoBehaviour
     public Text Coint;
     private void Start()
     {
-        Coint.text = card.cointAmount.ToString();
+        Coint.text = "";
     }
     // Update is called once per frame
     void Update()
@@ -23,5 +23,12 @@ public class CardDisplay : MonoBehaviour
             FindObjectOfType<ButtonController>().State(card.id);
             animator.SetTrigger(Cards.Open.ToString());
         });
+    }
+
+    public void randomValue()
+    {
+        int value = Random.Range(40, 100);
+        Coint.text =  value + " COINT";
+        Prefs.COINT += value;
     }
 }

@@ -7,4 +7,5 @@ public class character
 {
     public string name;
     public Color SkinColor;
+    public int cost;
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 8671604019482314930}
   - component: {fileID: 8671604019482314893}
   - component: {fileID: 8671604019482314892}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Coint
   m_TagString: Coint
   m_Icon: {fileID: 0}

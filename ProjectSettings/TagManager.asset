@@ -15,6 +15,15 @@ TagManager:
   - Trail
   - Rubi
   - Dart
+  - Coint
+  - Port
+  - FireEffect
+  - AttackPointOfPlayer
+  - addForce
+  - Lever
+  - ButtonLarge
+  - GroundMove
+  - ArrowZone
   layers:
   - Default
   - TransparentFX
@@ -26,8 +35,8 @@ TagManager:
   - Enemy
   - Player
   - Platform
-  - 
-  - 
+  - Button
+  - Coint
   - 
   - 
   - 

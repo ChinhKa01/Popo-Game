@@ -22,14 +22,6 @@ public class Prefs
         }
     }
 
-    public static int RUBI
-    {
-        get => PlayerPrefs.GetInt(SystemVariable.RUBI);
-        set
-        {
-            PlayerPrefs.SetInt(SystemVariable.RUBI, value);
-        }
-    }
 
     public static int LIFE
     {
@@ -46,6 +38,41 @@ public class Prefs
         set
         {
             PlayerPrefs.SetInt(SystemVariable.SKIN, value);
+        }
+    }
+
+    public static int DAME
+    {
+        get => PlayerPrefs.GetInt(SystemVariable.DAME);
+        set
+        {
+            PlayerPrefs.SetInt(SystemVariable.DAME, value);
+        }
+    }
+    public static int SPEED
+    {
+        get => PlayerPrefs.GetInt(SystemVariable.SPEED);
+        set
+        {
+            PlayerPrefs.SetInt(SystemVariable.SPEED, value);
+        }
+    }
+
+    public static float TIMEATTACK
+    {
+        get => PlayerPrefs.GetFloat(SystemVariable.TIMEATTACK);
+        set
+        {
+            PlayerPrefs.SetFloat(SystemVariable.TIMEATTACK, value);
+        }
+    }
+
+    public static float TIMETELE
+    {
+        get => PlayerPrefs.GetFloat(SystemVariable.TIMETELEPORT);
+        set
+        {
+            PlayerPrefs.SetFloat(SystemVariable.TIMETELEPORT, value);
         }
     }
 }

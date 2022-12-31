@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6214786324749132311}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.842, y: -8.4811, z: 0}
-  m_LocalScale: {x: 27.503723, y: 27.503723, z: 27.503723}
+  m_LocalPosition: {x: 27.0472, y: -19.8416, z: 0}
+  m_LocalScale: {x: 5.7069297, y: 7.2934556, z: 5.7069297}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -145,10 +145,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99a0e7be34760c944b40ed47e4e35405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pos1: {x: 0, y: 0, z: 0}
-  Pos2: {x: 0, y: 0, z: 0}
+  Pos1: {fileID: 0}
+  Pos2: {fileID: 0}
   Speed: 0
   isPingPong: 0
+  isReverse: 0
 --- !u!95 &1912227723032077006
 Animator:
   serializedVersion: 3
