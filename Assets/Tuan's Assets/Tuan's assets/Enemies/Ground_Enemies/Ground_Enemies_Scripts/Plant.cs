@@ -50,10 +50,10 @@ public class Plant : Enemy
 
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
+       /* if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
         {
             TakeDame(0.5);
-        }
+        }*/
 
         if (collision.gameObject.CompareTag("Player"))
         {
@@ -65,10 +65,10 @@ public class Plant : Enemy
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
+/*        if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
         {
             TakeDame(0.5);
-        }
+        }*/
 
         if (collision.gameObject.CompareTag("Player"))
         {

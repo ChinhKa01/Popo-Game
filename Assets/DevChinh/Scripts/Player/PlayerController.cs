@@ -279,7 +279,23 @@ public class PlayerController : MonoBehaviour
                     foreach (var obj in enemy)
                     {
                         Instantiate(damagePopups, obj.transform.position, Quaternion.identity);
-                        obj.GetComponent<BossController>().TakeDame(_damageRand);
+                        if (SystemVariable.gameController.hasBoss)
+                        {
+                            obj.GetComponent<BossController>().TakeDame(_damageRand);
+                        }
+                        else
+                        {
+                            try
+                            {
+                             obj.GetComponent<Enemy>().TakeDame(_damageRand);
+
+                            }
+                            catch (System.Exception ex)
+                            {
+                                Debug.Log("Lỗi" + ex);
+           
+                            }
+                        }
                     }
                     animator.SetTrigger(stateOfPlayer.Attack.ToString());
                 }

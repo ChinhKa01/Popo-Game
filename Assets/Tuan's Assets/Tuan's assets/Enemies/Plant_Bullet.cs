@@ -7,13 +7,18 @@ public class Plant_Bullet : MonoBehaviour
     [SerializeField] private float force;
 
     private Rigidbody2D rb;
-    private GameObject player;
+    public GameObject player;
     private float timer;
+
+    private void Awake()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+    }
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        player = GameObject.FindGameObjectWithTag("Player");
 
         Vector3 distance = player.transform.position - transform.position;
         rb.velocity = new Vector2(distance.x, distance.y).normalized * force;
