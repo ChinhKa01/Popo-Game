@@ -31,7 +31,14 @@ public class Dart : MonoBehaviour
             FindObjectOfType<PlayerController>().RandomDamage();
             int dame = FindObjectOfType<PlayerController>()._damageRand;
             Instantiate(damagePopups, collision.gameObject.transform.position, Quaternion.identity);
-            GameObject.FindGameObjectWithTag("Enemy").GetComponent<BossController>().TakeDame(dame);
+            if (SystemVariable.gameController.hasBoss)
+            {
+                GameObject.FindGameObjectWithTag("Enemy").GetComponent<BossController>().TakeDame(dame);
+            }
+            else
+            {
+                GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>().TakeDame(dame);
+            }
             gameObject.SetActive(false);
             Instantiate(SystemVariable.gameController.EffectOfPlayer[0], transform.position, Quaternion.identity);
         }

@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
+    public static Enemy instance;
     protected Animator anim;
     protected Rigidbody2D rb;
 
@@ -25,8 +26,7 @@ public class Enemy : MonoBehaviour
     protected RaycastHit2D dartDetection;
     protected bool wallDetected;
     protected bool groundDetected;
-    protected bool isAngry;
-
+    public bool isAngry;
     [HideInInspector] protected bool invincible;
 
     protected virtual void Awake()
@@ -38,6 +38,7 @@ public class Enemy : MonoBehaviour
             groundCheck = transform;
         if (wallCheck == null)
             wallCheck = transform;
+        instance = this;
     }
    
     //Hàm xử lý di chuyển xung quanh

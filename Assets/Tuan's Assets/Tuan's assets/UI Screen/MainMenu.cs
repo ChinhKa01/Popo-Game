@@ -6,31 +6,33 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public string startScene;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 
     //Hàm xử lý bắt đầu game
     public void StartGame()
     {
-        PlayerPrefs.DeleteAll();
-        ContinueGame();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void ContinueGame()
+    public void reScene()
     {
-        if(Prefs.LEVEL > 0)
-        {
-            SceneManager.LoadScene(Prefs.LEVEL);
-        }
-        else
-        {
-            Prefs.LEVEL++;
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
-
 
     //Hàm xử lý thoát game
     public void QuitGame()
     {
         Application.Quit();
+        Debug.Log("Quit");
     }
 }
