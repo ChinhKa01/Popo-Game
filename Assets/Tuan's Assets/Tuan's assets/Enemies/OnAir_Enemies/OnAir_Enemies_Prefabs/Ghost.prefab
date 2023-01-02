@@ -123,7 +123,7 @@ MonoBehaviour:
   wallCheckDistance: 0
   groundCheck: {fileID: 0}
   wallCheck: {fileID: 0}
-  HP: 10
+  HP: 5
   speed: 3
   idleTime: 4
   isAngry: 0

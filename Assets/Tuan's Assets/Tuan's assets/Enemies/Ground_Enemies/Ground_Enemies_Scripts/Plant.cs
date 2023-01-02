@@ -8,28 +8,34 @@ public class Plant : Enemy
     [SerializeField] private Transform bulletPos;
     [SerializeField] private float shootingRange;
 
-    private float timer;
+    [SerializeField] private float attackCoolDownTime;
+    private float attackCoolDownTimeCounter;
     private GameObject player;
 
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         anim = GetComponent<Animator>();
+        attackCoolDownTimeCounter = attackCoolDownTime;
     }
     private void Update()
     {
         float distance = Vector2.Distance(transform.position, player.transform.position);
         if(distance < shootingRange)
         {
-            timer += Time.deltaTime;
+            attackCoolDownTimeCounter -= Time.deltaTime;
 
-            if (timer > 2)
+            if (attackCoolDownTimeCounter < 0 && SystemVariable.gameController._state == stateOfGame.Play.ToString())
             {
-                timer = 0;
                 anim.SetTrigger("attack");
+                attackCoolDownTimeCounter = attackCoolDownTime;
             }
         }
 
+       if(SystemVariable.gameController._state != stateOfGame.Play.ToString())
+        {
+            attackCoolDownTimeCounter += Time.deltaTime;
+        }
 
         if (transform.position.x > player.transform.position.x)
         {
@@ -48,33 +54,13 @@ public class Plant : Enemy
         Instantiate(plantBullet, bulletPos.position, Quaternion.identity);
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
-       /* if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
-        {
-            TakeDame(0.5);
-        }*/
-
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-
-            player.TakeDame();
-        }
+        base.OnTriggerEnter2D(collision);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-/*        if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
-        {
-            TakeDame(0.5);
-        }*/
-
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-
-            player.TakeDame();
-        }
+        base.OnCollisionEnter2D(collision);
     }
 }

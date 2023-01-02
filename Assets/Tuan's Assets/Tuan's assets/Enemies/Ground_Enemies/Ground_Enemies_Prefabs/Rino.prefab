@@ -294,7 +294,7 @@ MonoBehaviour:
   wallCheckDistance: 1.71
   groundCheck: {fileID: 4835124039951971660}
   wallCheck: {fileID: 4835124039359438443}
-  HP: 20
+  HP: 5
   speed: 5
   idleTime: 2
   isAngry: 0

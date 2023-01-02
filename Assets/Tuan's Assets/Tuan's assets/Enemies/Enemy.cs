@@ -26,7 +26,8 @@ public class Enemy : MonoBehaviour
     protected RaycastHit2D dartDetection;
     protected bool wallDetected;
     protected bool groundDetected;
-    public bool isAngry;
+    protected bool playerDetected;
+    protected bool isAngry;
     [HideInInspector] protected bool invincible;
 
     protected virtual void Awake()
@@ -57,6 +58,8 @@ public class Enemy : MonoBehaviour
             idleTimeCounter = idleTime;
             Flip();
         }
+
+        
     }
 
     //Hàm xử lý nhận sát thương
@@ -108,5 +111,42 @@ public class Enemy : MonoBehaviour
 
         Gizmos.DrawLine(wallCheck.position, new Vector2(wallCheck.position.x + playerDetection.distance * facingDirection, wallCheck.position.y));
 
+    }
+
+    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    {
+
+
+        if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
+          {
+              TakeDame(1);
+          }
+
+  if (collision.gameObject.CompareTag("Player"))
+  {
+      PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+
+      player.TakeDame();
+  }
+
+  if (collision.gameObject.CompareTag("DeathZone"))
+  {
+      Destroy(gameObject);
+  }
+}
+
+protected virtual void OnCollisionEnter2D(Collision2D collision)
+{
+        /*if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
+          {
+              TakeDame(0.5);
+          }*/
+
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+
+            player.TakeDame();
+        }
     }
 }

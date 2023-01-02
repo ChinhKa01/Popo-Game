@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8256649126405225032}
   - component: {fileID: 8256649126405225033}
   - component: {fileID: 8256649126405225034}
+  - component: {fileID: 1277499153756711761}
   m_Layer: 7
   m_Name: Sprite
   m_TagString: Untagged
@@ -75,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: -7659945631384244969, guid: 8721cbbfe3ba6a8418cd21a8de3a410c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -142,12 +143,11 @@ MonoBehaviour:
     m_Bits: 1153
   groundCheckDistance: 0
   wallCheckDistance: 0
-  groundCheck: {fileID: 0}
-  wallCheck: {fileID: 0}
-  HP: 10
-  speed: 4
+  groundCheck: {fileID: 8256649127068909963}
+  wallCheck: {fileID: 8256649127068909963}
+  HP: 5
+  speed: 6
   idleTime: 2
-  isAngry: 0
   idlePoints:
   - {fileID: 8256649127496034099}
   - {fileID: 8256649127737605134}
@@ -164,8 +164,29 @@ MonoBehaviour:
   yOffSet: 6
   bulletPrefab: {fileID: 1799143998618043519, guid: 0769dc9431162004a90e47eadaab8963, type: 3}
   bulletPoint: {fileID: 8256649126879081136}
-  bulletSpeed: 8
+  bulletSpeed: 10
   angrySpeed: 8
+--- !u!50 &1277499153756711761
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8256649126405225028}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &8256649126494259971
 GameObject:
   m_ObjectHideFlags: 0

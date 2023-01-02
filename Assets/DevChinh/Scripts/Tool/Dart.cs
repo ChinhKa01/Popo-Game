@@ -35,10 +35,7 @@ public class Dart : MonoBehaviour
             {
                 GameObject.FindGameObjectWithTag("Enemy").GetComponent<BossController>().TakeDame(dame);
             }
-            else
-            {
-                GameObject.FindGameObjectWithTag("Enemy").GetComponent<Enemy>().TakeDame(dame);
-            }
+           
             gameObject.SetActive(false);
             Instantiate(SystemVariable.gameController.EffectOfPlayer[0], transform.position, Quaternion.identity);
         }
