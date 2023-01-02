@@ -30,7 +30,10 @@ public class Plant_Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (  SystemVariable.gameController._state != stateOfGame.Play.ToString())
+        {
+            Destroy(gameObject);
+        }
     }
 
 
@@ -50,6 +53,6 @@ public class Plant_Bullet : MonoBehaviour
 
             player.TakeDame();
         }
-        Destroy(gameObject, 1);
+        Destroy(gameObject);
     }
 }

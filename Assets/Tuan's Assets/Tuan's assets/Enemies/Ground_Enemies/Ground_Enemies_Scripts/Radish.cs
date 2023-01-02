@@ -28,7 +28,6 @@ public class Radish : Enemy
         {
             rb.gravityScale = 1;    
             isAngry = false;
-            invincible = true;
         }
 
         if (!isAngry)
@@ -57,7 +56,6 @@ public class Radish : Enemy
             angryTimeCounter = angryTime;
             rb.gravityScale = 12;
             isAngry = true;
-            invincible = false;
         }
         else if(isAngry)
         {
@@ -66,29 +64,14 @@ public class Radish : Enemy
             
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
-        {
-            TakeDame(0.5);
-        }
-
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-
-            player.TakeDame();
-        }
+        base.OnTriggerEnter2D(collision);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-
-            player.TakeDame();
-        }
+        base.OnCollisionEnter2D(collision);
     }
     protected override void CollisionCheck()
     {

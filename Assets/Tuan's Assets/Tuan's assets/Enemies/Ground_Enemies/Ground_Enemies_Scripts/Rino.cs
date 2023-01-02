@@ -60,29 +60,14 @@ public class Rino : Enemy
         anim.SetFloat("xVelocity", rb.velocity.x);
     }
 
-    protected virtual void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
-        {
-            TakeDame(0.5);
-        }
-
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-
-            player.TakeDame();
-        }
+        base.OnTriggerEnter2D(collision);
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected override void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            PlayerController player = collision.gameObject.GetComponent<PlayerController>();
-
-            player.TakeDame();
-        }
+        base.OnCollisionEnter2D(collision);
     }
 
     protected override void OnDrawGizmos()

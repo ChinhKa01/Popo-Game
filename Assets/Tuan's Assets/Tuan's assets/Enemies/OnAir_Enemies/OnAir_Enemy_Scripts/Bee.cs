@@ -79,19 +79,14 @@ public class Bee : Enemy
         isAngry = false;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag(Tag.Dart.ToString()))
-        {
-            TakeDame(0.5);
-        }
+        base.OnTriggerEnter2D(collision);
+    }
 
-        if (collision.GetComponent<PlayerController>() != null)
-        {
-            PlayerController player = collision.GetComponent<PlayerController>();
-
-            player.TakeDame();
-        }
+    protected override void OnCollisionEnter2D(Collision2D collision)
+    {
+        base.OnCollisionEnter2D(collision);
     }
 
     protected override void OnDrawGizmos()

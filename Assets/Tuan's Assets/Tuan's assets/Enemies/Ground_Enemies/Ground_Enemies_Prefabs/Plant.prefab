@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 7818567065505027544}
   - component: {fileID: 7818567065505027546}
   - component: {fileID: 7818567065505027545}
+  - component: {fileID: -7243099427752970436}
   m_Layer: 7
   m_Name: Plant
   m_TagString: Enemy
@@ -181,12 +182,33 @@ MonoBehaviour:
     m_Bits: 0
   groundCheckDistance: 0
   wallCheckDistance: 0
-  groundCheck: {fileID: 0}
-  wallCheck: {fileID: 0}
-  HP: 10
+  groundCheck: {fileID: 7818567065505027551}
+  wallCheck: {fileID: 7818567065505027551}
+  HP: 3
   speed: 0
   idleTime: 0
-  isAngry: 0
   plantBullet: {fileID: 3341400140191010604, guid: 3743ad2606032fa459e9ea959cf5ee2b, type: 3}
   bulletPos: {fileID: 7818567065087369573}
-  shootingRange: 20
+  shootingRange: 15
+  attackCoolDownTime: 2
+--- !u!50 &-7243099427752970436
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7818567065505027549}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
